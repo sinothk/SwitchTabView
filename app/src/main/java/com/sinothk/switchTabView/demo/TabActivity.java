@@ -30,7 +30,7 @@ public class TabActivity extends AppCompatActivity implements ViewPager.OnPageCh
 
     private void initView() {
         SegmentView segment0 = (SegmentView) findViewById(R.id.sv_segement0);
-        segment0.setTitles(Arrays.asList("标签一", "标签二"));
+        segment0.setTitles(Arrays.asList("男", "女"));
 
         segment0.setOnSelectedListener(new SegmentView.OnSelectedListener() {
             @Override

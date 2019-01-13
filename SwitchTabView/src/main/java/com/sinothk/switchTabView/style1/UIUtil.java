@@ -25,6 +25,19 @@ public class UIUtil {
     }
 
     /**
+     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
+     */
+    /**
+     * convert sp to its equivalent px
+     *
+     * 将sp转换为px
+     */
+    public static int sp2px(Context context, float spValue) {
+        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (spValue * fontScale + 0.5f);
+    }
+
+    /**
      * 获取字体高度
      */
     public static float getTextHeight(Paint p) {

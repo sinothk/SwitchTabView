@@ -45,7 +45,7 @@ public class TabTextView extends View implements TabView {
 
     private void init(Context context) {
 
-        textSize = textSize == 0 ? UIUtil.dip2px(context, 15) : textSize;
+        textSize = UIUtil.sp2px(context, 15);//textSize == 0 ? UIUtil.dip2px(context, 15) : textSize;
 
         textColor = ContextCompat.getColor(context, R.color.lib_ui_common_color_text);
         textColorFocus = ContextCompat.getColor(context, R.color.lib_ui_common_color_accent);
@@ -80,12 +80,6 @@ public class TabTextView extends View implements TabView {
     @Override
     public void setText(String text) {
         this.text = text;
-    }
-
-    public static void setTextSize(float ts) {
-        if (ts > 0) {
-            textSize = ts;
-        }
     }
 
     public static void setTextColor(int tc, int tcFocus) {

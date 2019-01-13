@@ -25,9 +25,9 @@ public class TabTextView extends View implements TabView {
     /**
      * define
      */
-    private int textSize;//title文字大小
-    private int textColor;//title文字颜色
-    private int textColorFocus;//title文字颜色
+    private static float textSize;//title文字大小
+    private static int textColor;//title文字颜色
+    private static int textColorFocus;//title文字颜色
     private int padding;//title文字左右预留间距
 
     public TabTextView(Context context) {
@@ -44,7 +44,9 @@ public class TabTextView extends View implements TabView {
     }
 
     private void init(Context context) {
-        textSize = UIUtil.dip2px(context, 15);
+
+        textSize = textSize == 0 ? UIUtil.dip2px(context, 15) : textSize;
+
         textColor = ContextCompat.getColor(context, R.color.lib_ui_common_color_text);
         textColorFocus = ContextCompat.getColor(context, R.color.lib_ui_common_color_accent);
 
@@ -80,6 +82,17 @@ public class TabTextView extends View implements TabView {
         this.text = text;
     }
 
+    public static void setTextSize(float ts) {
+        if (ts > 0) {
+            textSize = ts;
+        }
+    }
+
+    public static void setTextColor(int tc, int tcFocus) {
+        textColor = tc;
+        textColorFocus = tcFocus;
+    }
+
     @Override
     public void setPadding(int padding) {
         this.padding = padding;
@@ -92,6 +105,15 @@ public class TabTextView extends View implements TabView {
 
     @Override
     public void notifyData(boolean focus) {
+//
+//        if (focus) {
+//            this.paint.setColor(focus ? textColorFocus : textColor);
+//            tvTitle.setTextColor(textColorFocus);
+//        } else {
+//            this.paint.setColor(focus ? textColorFocus : textColor);
+//            tvTitle.setTextColor(textColor);
+//        }
+
         this.paint.setColor(focus ? textColorFocus : textColor);
         invalidate();
     }

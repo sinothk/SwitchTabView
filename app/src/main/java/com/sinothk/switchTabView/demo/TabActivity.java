@@ -42,9 +42,12 @@ public class TabActivity extends AppCompatActivity implements ViewPager.OnPageCh
 
         ScrollTab[] scrollTab0 = new ScrollTab[]{(ScrollTab) findViewById(R.id.stab_tab00), (ScrollTab) findViewById(R.id.stab_tab01), (ScrollTab) findViewById(R.id.stab_tab02)};
         ScrollTab[] scrollTab1 = new ScrollTab[]{(ScrollTab) findViewById(R.id.stab_tab10), (ScrollTab) findViewById(R.id.stab_tab11), (ScrollTab) findViewById(R.id.stab_tab12)};
+
         ViewPager pager0 = (ViewPager) findViewById(R.id.pager0);
         ViewPager pager1 = (ViewPager) findViewById(R.id.pager1);
+
         initTab(scrollTab0, pager0, Arrays.asList("Kitkat", "Lollipop", "M"));
+
         initTab(scrollTab1, pager1, Arrays.asList("Peach", "Lemon", "Watermelon", "Pear", "Avocado",
                 "Banana", "Grape", "Apricot", "Orange", "Kumquat"));
     }

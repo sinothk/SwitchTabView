@@ -17,6 +17,9 @@ import com.sinothk.switchTabView.R;
 public class TabViewGroup extends RelativeLayout implements TabView {
     private Context context;
     private TextView tvTitle, tvNumber;
+    private static float textSize;
+    private static int textColor;
+    private static int textColorFocus;//title文字颜色
 
     public TabViewGroup(Context context) {
         super(context);
@@ -33,10 +36,25 @@ public class TabViewGroup extends RelativeLayout implements TabView {
         init(context);
     }
 
+    public static void setTextSize(float ts) {
+        if (ts > 0) {
+            textSize = ts;
+        }
+    }
+
+    public static void setTextColor(int tc, int tcFocus) {
+        textColor = tc;
+        textColorFocus = tcFocus;
+    }
+
     private void init(Context context) {
         this.context = context;
         View root = LayoutInflater.from(context).inflate(R.layout.lib_ui_view_stab_view_tab, this);
         tvTitle = (TextView) root.findViewById(R.id.tv_title);
+
+        if (textSize > 0) {
+            tvTitle.setTextSize(textSize);
+        }
         tvNumber = (TextView) root.findViewById(R.id.tv_number);
     }
 
@@ -58,7 +76,13 @@ public class TabViewGroup extends RelativeLayout implements TabView {
 
     @Override
     public void notifyData(boolean focus) {
-        tvTitle.setTextColor(ContextCompat.getColor(context, focus ? R.color.lib_ui_common_color_accent : R.color.lib_ui_common_color_text));
+        if (focus) {
+            tvTitle.setTextColor(textColorFocus);
+        } else {
+            tvTitle.setTextColor(textColor);
+        }
+
+//        tvTitle.setTextColor(ContextCompat.getColor(context, focus ? R.color.lib_ui_common_color_accent : R.color.lib_ui_common_color_text));
     }
 
     @Override

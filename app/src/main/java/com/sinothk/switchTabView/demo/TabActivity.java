@@ -46,7 +46,7 @@ public class TabActivity extends AppCompatActivity implements ViewPager.OnPageCh
         ViewPager pager0 = (ViewPager) findViewById(R.id.pager0);
         ViewPager pager1 = (ViewPager) findViewById(R.id.pager1);
 
-        initTab(scrollTab0, pager0, Arrays.asList("Kitkat", "Lollipop", "M"));
+        initTab(scrollTab0, pager0, Arrays.asList("图片", "视频", "收藏"));
 
         initTab(scrollTab1, pager1, Arrays.asList("Peach", "Lemon", "Watermelon", "Pear", "Avocado",
                 "Banana", "Grape", "Apricot", "Orange", "Kumquat"));

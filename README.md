@@ -69,7 +69,6 @@ https://github.com/sinothk/SwitchTabView/blob/master/app/imgs/QQ20181009163635.p
             android:background="#FFFFFF"
             android:orientation="vertical"
 
-            app:lib_ui_view_stab_text_size="10dp"
             app:lib_ui_view_stab_text_color="#888888"
 
             app:lib_ui_view_stab_avag="false"

@@ -30,7 +30,6 @@
         app:lib_ui_view_segementv_colorSub="#FFF"
         app:lib_ui_view_segementv_divideWidth="1dp"
         app:lib_ui_view_segementv_radius="4dp"
-        app:lib_ui_view_segementv_textSize="12dp"
         app:lib_ui_view_segementv_titles="标签一;标签二;标签三;标签四" />
 
     <com.sinothk.switchTabView.style1.ScrollTab
@@ -40,9 +39,6 @@
         android:layout_marginTop="20dp"
         android:background="#F9F9F9"
         android:orientation="vertical"
-
-        app:lib_ui_view_stab_text_size="14sp"
-
         app:lib_ui_view_stab_avag="true"
         app:lib_ui_view_stab_indicatorColor="@color/lib_ui_common_color_accent"
         app:lib_ui_view_stab_indicatorPadding="20dp"

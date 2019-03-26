@@ -25,7 +25,6 @@ public class TabTextView extends View implements TabView {
     /**
      * define
      */
-    private static float textSize;//title文字大小
     private static int textColor;//title文字颜色
     private static int textColorFocus;//title文字颜色
     private int padding;//title文字左右预留间距
@@ -52,7 +51,6 @@ public class TabTextView extends View implements TabView {
 
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setTextAlign(Paint.Align.CENTER);
-        paint.setTextSize(textSize);
         paint.setColor(textColor);
 
         textHeight = UIUtil.getTextHeight(paint);
@@ -85,12 +83,6 @@ public class TabTextView extends View implements TabView {
     public static void setTextColor(int tc, int tcFocus) {
         textColor = tc;
         textColorFocus = tcFocus;
-    }
-
-    public static void setTextColor(int tc, int tcFocus, float ts) {
-        textColor = tc;
-        textColorFocus = tcFocus;
-        textSize = ts;
     }
 
     @Override

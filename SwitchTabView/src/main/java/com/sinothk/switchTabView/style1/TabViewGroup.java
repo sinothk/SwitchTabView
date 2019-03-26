@@ -19,7 +19,6 @@ public class TabViewGroup extends RelativeLayout implements TabView {
     private TextView tvTitle, tvNumber;
     private static int textColor;
     private static int textColorFocus;//title文字颜色
-    private static float textSize;//title文字大小
 
     public TabViewGroup(Context context) {
         super(context);
@@ -41,17 +40,10 @@ public class TabViewGroup extends RelativeLayout implements TabView {
         textColorFocus = tcFocus;
     }
 
-    public static void setTextColor(int tc, int tcFocus, float ts) {
-        textColor = tc;
-        textColorFocus = tcFocus;
-        textSize = ts;
-    }
-
     private void init(Context context) {
         this.context = context;
         View root = LayoutInflater.from(context).inflate(R.layout.lib_ui_view_stab_view_tab, this);
         tvTitle = (TextView) root.findViewById(R.id.tv_title);
-
         tvNumber = (TextView) root.findViewById(R.id.tv_number);
     }
 
@@ -78,10 +70,6 @@ public class TabViewGroup extends RelativeLayout implements TabView {
         } else {
             tvTitle.setTextColor(textColor);
         }
-
-        tvTitle.setTextSize(textSize);
-
-//        tvTitle.setTextColor(ContextCompat.getColor(context, focus ? R.color.lib_ui_common_color_accent : R.color.lib_ui_common_color_text));
     }
 
     @Override

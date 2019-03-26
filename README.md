@@ -53,9 +53,8 @@ https://github.com/sinothk/SwitchTabView/blob/master/app/imgs/QQ20181009163635.p
 
 # tab list
  ## dimens.xml
-  <resources> 文字大小控制
-    <dimen name="scroll_tab_text_size">14sp</dimen>
-  </resources>
+  文字大小控制
+  <dimen name="scroll_tab_text_size">14sp</dimen>
 
  ## xml
     <?xml version="1.0" encoding="utf-8"?>

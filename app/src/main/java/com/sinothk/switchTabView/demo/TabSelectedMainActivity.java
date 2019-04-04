@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.sinothk.switchTabView.style1.ScrollTab;
-import com.sinothk.switchTabView.style1.ScrollTitleTab;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,11 +54,11 @@ public class TabSelectedMainActivity extends AppCompatActivity {
         pager.setOffscreenPageLimit(titles.size() - 1);
         pager.setAdapter(fragmentPagerAdapter);
 
-        final ScrollTitleTab tab = (ScrollTitleTab) findViewById(R.id.stab_tab01);
+        final ScrollTab tab = (ScrollTab) findViewById(R.id.stab_tab01);
 
         tab.setTitles(titles, 100)
                 .setViewPager(pager)
-                .setOnTabListener(new ScrollTitleTab.OnTabListener() {
+                .setOnTabListener(new ScrollTab.OnTabListener() {
                     @Override
                     public void onChange(int index, View v) {
                         pager.setCurrentItem(index, true);

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".TabTestMainActivity">
 
-    <com.sinothk.switchTabView.style1.ScrollTitleTab
+    <com.sinothk.switchTabView.style1.ScrollTab
         android:id="@+id/stab_tab01"
         android:layout_width="match_parent"
         android:layout_height="42dp"

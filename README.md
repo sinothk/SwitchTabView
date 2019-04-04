@@ -14,7 +14,7 @@
 ## Step 2. Add the dependency
 
     dependencies {
-            implementation 'com.github.sinothk:SwitchTabView:1.19.0113'
+            implementation 'com.github.sinothk:SwitchTabView:2.0.0326'
     }
 
 
@@ -52,6 +52,14 @@
 https://github.com/sinothk/SwitchTabView/blob/master/app/imgs/QQ20181009163635.png
 
 # tab list
+ ## dimens.xml
+ 
+    文字大小控制
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <dimen name="scroll_tab_text_size">14sp</dimen>
+    </resources>
+
  ## xml
     <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

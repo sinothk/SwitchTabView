@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".TabActivity">
+        <activity android:name=".TabSelectedMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TabTestMainActivity" />
+        <activity android:name=".TabActivity" />
     </application>
 
 </manifest>

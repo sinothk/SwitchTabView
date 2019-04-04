@@ -5,13 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/demoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="实例Demo" />
+
     <com.sinothk.switchTabView.style1.segement.SegmentView
         android:id="@+id/sv_segement0"
         android:layout_width="90dp"
         android:layout_height="27dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
         app:lib_ui_view_segementv_borderWidth="1dp"
         app:lib_ui_view_segementv_colorMain="@color/lib_ui_common_color_accent"
         app:lib_ui_view_segementv_colorSub="#FFF"
@@ -23,8 +29,8 @@
         android:layout_width="match_parent"
         android:layout_height="27dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
         app:lib_ui_view_segementv_borderWidth="1dp"
         app:lib_ui_view_segementv_colorMain="@color/lib_ui_common_color_accent"
         app:lib_ui_view_segementv_colorSub="#FFF"

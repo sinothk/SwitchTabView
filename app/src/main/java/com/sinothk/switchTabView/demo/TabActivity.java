@@ -1,5 +1,6 @@
 package com.sinothk.switchTabView.demo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -26,6 +27,13 @@ public class TabActivity extends AppCompatActivity implements ViewPager.OnPageCh
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
         initView();
+
+        findViewById(R.id.demoBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TabActivity.this, TabSelectedMainActivity.class));
+            }
+        });
     }
 
     private void initView() {

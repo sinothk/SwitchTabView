@@ -14,7 +14,7 @@
 ## Step 2. Add the dependency
 
     dependencies {
-            implementation 'com.github.sinothk:SwitchTabView:2.0.0405'
+            implementation 'com.github.sinothk:SwitchTabView:2.0.0406'
     }
 
 

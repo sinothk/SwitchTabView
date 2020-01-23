@@ -92,7 +92,7 @@ https://github.com/sinothk/SwitchTabView/blob/master/app/imgs/QQ20181009163635.p
         <!--app:lib_ui_view_stab_text_color_selected="@color/lib_ui_color_yellow"-->
         <!--app:lib_ui_view_stab_indicatorColor="@color/lib_ui_color_yellow"-->
 
-        <android.support.v4.view.ViewPager
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/pager0"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

@@ -55,8 +55,9 @@ public class TabTextView extends View implements TabView {
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setColor(textColor);
-        paint.setTextSize(textSize);
-
+        if (textSize > 0) {
+            paint.setTextSize(textSize);
+        }
         textHeight = UIUtil.getTextHeight(paint);
     }
 

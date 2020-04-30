@@ -14,16 +14,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class TabSelectedMainActivity extends AppCompatActivity {
+public class TabSelectedMain2Activity extends AppCompatActivity {
 
     int index = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab_selected_main);
+        setContentView(R.layout.activity_tab_selected2_main);
 
-//        index = 1;
+        index = 1;
 
         initTab(Arrays.asList("推荐", "廉政"));
     }
@@ -32,7 +32,7 @@ public class TabSelectedMainActivity extends AppCompatActivity {
 
         final ArrayList<Fragment> fragments = new ArrayList<>();
         for (int i = 0; i < titles.size(); i++) {
-            TabFragment fragment = new TabFragment();
+            TabFragment2 fragment = new TabFragment2();
             Bundle bundle = new Bundle();
             bundle.putInt("index", i);
             fragment.setArguments(bundle);
@@ -57,7 +57,7 @@ public class TabSelectedMainActivity extends AppCompatActivity {
 
         final ScrollTab tab = (ScrollTab) findViewById(R.id.stab_tab01);
 
-        tab.setTitles(titles)
+        tab.setTitles(titles, 100)
                 .setViewPager(pager)
                 .setOnTabListener(new ScrollTab.OnTabListener() {
                     @Override

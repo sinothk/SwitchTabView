@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
  * TabFragment
  * Created by D on 2017/8/27.
  */
-public class TabFragment extends Fragment {
+public class TabFragment2 extends Fragment {
     private View rootView;
 
     @Nullable
@@ -35,12 +35,5 @@ public class TabFragment extends Fragment {
     private void init() {
         TextView tvContent = (TextView) rootView.findViewById(R.id.tv_content);
         tvContent.setText(getArguments() != null ? "" + getArguments().getInt("index") : "");
-
-        tvContent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), TabSelectedMain2Activity.class));
-            }
-        });
     }
 }

@@ -169,24 +169,24 @@ public class ScrollTabBack extends HorizontalScrollView implements View.OnClickL
 
     private View getTabView(int i) {
         View child;
-        if (type == TYPE_VIEW) {
-            TabTextView.setTextColor(textColor, textFocusColor);
+//        if (type == TYPE_VIEW) {
+//            TabTextView.setTextColor(textColor, textFocusColor);
             child = new TabTextView(context);
-        } else {
-            TabViewGroup.setTextColor(textColor, textFocusColor);
-
-            child = new TabViewGroup(context);
-        }
-        ((TabView) child).setText(items.get(i).title);
-        ((TabView) child).setNumber(items.get(i).text, TextUtils.isEmpty(items.get(i).text) ? GONE : VISIBLE);
-        if (!isAvag) {
-            ((TabView) child).setPadding((int) padding);
-        }
-        ((TabView) child).notifyData(i == position);
-        child.setLayoutParams(new LinearLayout.LayoutParams(isAvag ? width / (count > 0 ? count : 1) : ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.MATCH_PARENT));
-        child.setTag(i);
-        child.setOnClickListener(this);
+//        } else {
+//            TabViewGroup.setTextColor(textColor, textFocusColor);
+//
+//            child = new TabViewGroup(context);
+//        }
+//        ((TabView) child).setText(items.get(i).title);
+//        ((TabView) child).setNumber(items.get(i).text, TextUtils.isEmpty(items.get(i).text) ? GONE : VISIBLE);
+//        if (!isAvag) {
+//            ((TabView) child).setPadding((int) padding);
+//        }
+//        ((TabView) child).notifyData(i == position);
+//        child.setLayoutParams(new LinearLayout.LayoutParams(isAvag ? width / (count > 0 ? count : 1) : ViewGroup.LayoutParams.WRAP_CONTENT,
+//                ViewGroup.LayoutParams.MATCH_PARENT));
+//        child.setTag(i);
+//        child.setOnClickListener(this);
         return child;
     }
 

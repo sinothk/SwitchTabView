@@ -52,6 +52,8 @@
         app:lib_ui_view_stab_indicatorType="trend"
         app:lib_ui_view_stab_indicatorWeight="1dp"
         app:lib_ui_view_stab_indicatorWidth="40dp"
+        app:lib_ui_view_stab_text_color="@color/red"
+        app:lib_ui_view_stab_text_color_selected="@color/green"
         app:lib_ui_view_stab_type="view_group" />
 
     <com.sinothk.switchTabView.style1.ScrollTab
@@ -67,6 +69,8 @@
         app:lib_ui_view_stab_indicatorType="translation"
         app:lib_ui_view_stab_indicatorWeight="1dp"
         app:lib_ui_view_stab_indicatorWidth="40dp"
+        app:lib_ui_view_stab_text_color="@color/red"
+        app:lib_ui_view_stab_text_color_selected="@color/blue"
         app:lib_ui_view_stab_type="view_group" />
 
     <com.sinothk.switchTabView.style1.ScrollTab

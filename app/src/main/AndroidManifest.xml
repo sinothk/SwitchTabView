@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".TabTestMainActivity" />
         <activity android:name=".TabActivity" />
+        <activity android:name=".TabSelectedMain2Activity" />
     </application>
 
 </manifest>

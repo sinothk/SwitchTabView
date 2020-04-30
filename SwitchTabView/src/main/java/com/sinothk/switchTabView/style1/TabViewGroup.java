@@ -16,8 +16,9 @@ import com.sinothk.switchTabView.R;
 public class TabViewGroup extends RelativeLayout implements TabView {
     private Context context;
     private TextView tvTitle, tvNumber;
-    private static int textColor;
-    private static int textColorFocus;//title文字颜色
+    private int textColor;
+    private int textColorFocus;//title文字颜色
+    private float textSize = 0;
 
     public TabViewGroup(Context context) {
         super(context);
@@ -34,9 +35,13 @@ public class TabViewGroup extends RelativeLayout implements TabView {
         init(context);
     }
 
-    public static void setTextColor(int tc, int tcFocus) {
+    public void setTextColor(int tc, int tcFocus) {
         textColor = tc;
         textColorFocus = tcFocus;
+    }
+
+    public void setTextSize(float ts) {
+        textSize = ts;
     }
 
     private void init(Context context) {
@@ -68,6 +73,10 @@ public class TabViewGroup extends RelativeLayout implements TabView {
             tvTitle.setTextColor(textColorFocus);
         } else {
             tvTitle.setTextColor(textColor);
+        }
+
+        if (textSize > 0) {
+            tvTitle.setTextSize(textSize);
         }
     }
 

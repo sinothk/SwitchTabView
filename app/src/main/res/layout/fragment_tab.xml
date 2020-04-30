@@ -9,6 +9,8 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="content"
+        android:clickable="true"
+        android:focusable="true"
         android:textColor="@color/colorAccent"
         android:textSize="60dp" />
 </FrameLayout>

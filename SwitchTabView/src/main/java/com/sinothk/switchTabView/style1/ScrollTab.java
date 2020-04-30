@@ -65,6 +65,7 @@ public class ScrollTab extends HorizontalScrollView implements View.OnClickListe
     // 文字
     private int textColor;
     private int textFocusColor;
+    private float textSize;
 
     private ArrayList<TabItem> items;
     private ArrayList<View> tabs;
@@ -106,6 +107,7 @@ public class ScrollTab extends HorizontalScrollView implements View.OnClickListe
         // 文本
         textColor = typedArray.getColor(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_text_color, ContextCompat.getColor(context, R.color.lib_ui_common_color_text));
         textFocusColor = typedArray.getColor(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_text_color_selected, ContextCompat.getColor(context, R.color.colorPrimary));
+        textSize = typedArray.getDimension(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_text_size, UIUtil.dip2px(context, 0));
 
         typedArray.recycle();
     }
@@ -208,12 +210,13 @@ public class ScrollTab extends HorizontalScrollView implements View.OnClickListe
     private View getTabView(int i) {
         View child;
         if (type == TYPE_VIEW) {
-            TabTextView.setTextColor(textColor, textFocusColor);
             child = new TabTextView(context);
+            ((TabTextView) child).setTextColor(textColor, textFocusColor);
+            ((TabTextView) child).setTextSize(textSize);
         } else {
-            TabViewGroup.setTextColor(textColor, textFocusColor);
-
             child = new TabViewGroup(context);
+            ((TabViewGroup) child).setTextColor(textColor, textFocusColor);
+            ((TabViewGroup) child).setTextSize(textSize);
         }
         ((TabView) child).setText(items.get(i).title);
         ((TabView) child).setNumber(items.get(i).text, TextUtils.isEmpty(items.get(i).text) ? GONE : VISIBLE);

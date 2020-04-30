@@ -54,11 +54,14 @@ https://github.com/sinothk/SwitchTabView/blob/master/app/imgs/QQ20181009163635.p
 # tab list
  ## dimens.xml
  
-    文字大小控制
+    文字大小控制：统一字号设置，多个可通过属性设置
     <?xml version="1.0" encoding="utf-8"?>
     <resources>
         <dimen name="scroll_tab_text_size">14sp</dimen>
     </resources>
+    
+    // 是否平分
+    app:lib_ui_view_stab_avag="true"
 
  ## xml
     <?xml version="1.0" encoding="utf-8"?>

@@ -80,13 +80,15 @@ https://github.com/sinothk/SwitchTabView/blob/master/app/imgs/QQ20181009163635.p
             app:lib_ui_view_stab_text_color="#888888"
 
             app:lib_ui_view_stab_avag="false"
-
+            app:lib_ui_view_stab_indicatorColor="@color/green"
             app:lib_ui_view_stab_indicatorPadding="2dp"
             app:lib_ui_view_stab_indicatorRadius="1.5dp"
             app:lib_ui_view_stab_indicatorType="translation"
             app:lib_ui_view_stab_indicatorWeight="5dp"
             app:lib_ui_view_stab_indicatorWidth="30dp"
-
+            app:lib_ui_view_stab_text_color="@color/red"
+            app:lib_ui_view_stab_text_color_selected="@color/blue"
+            app:lib_ui_view_stab_text_size="28sp"
             app:lib_ui_view_stab_type="view_group" />
 
         <!--app:lib_ui_view_stab_text_color_selected="@color/lib_ui_color_yellow"-->

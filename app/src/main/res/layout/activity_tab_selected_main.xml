@@ -15,16 +15,15 @@
         android:orientation="vertical"
         app:lib_ui_view_stab_avag="true"
         app:lib_ui_view_stab_indicatorColor="@color/green"
-
         app:lib_ui_view_stab_indicatorPadding="2dp"
-
         app:lib_ui_view_stab_indicatorRadius="1.5dp"
         app:lib_ui_view_stab_indicatorType="translation"
         app:lib_ui_view_stab_indicatorWeight="5dp"
         app:lib_ui_view_stab_indicatorWidth="30dp"
         app:lib_ui_view_stab_text_color="@color/red"
         app:lib_ui_view_stab_text_color_selected="@color/blue"
-        app:lib_ui_view_stab_text_size="28sp"
+        app:lib_ui_view_stab_text_size="14sp"
+        app:lib_ui_view_stab_titles="推荐;廉政"
         app:lib_ui_view_stab_type="view_group" />
 
     <!--app:lib_ui_view_stab_titles="推荐;廉政"-->

@@ -57,7 +57,7 @@ public class TabSelectedMainActivity extends AppCompatActivity {
 
         final ScrollTab tab = (ScrollTab) findViewById(R.id.stab_tab01);
 
-        tab.setTitles(titles)
+        tab//.setTitles(titles)
                 .setViewPager(pager)
                 .setOnTabListener(new ScrollTab.OnTabListener() {
                     @Override

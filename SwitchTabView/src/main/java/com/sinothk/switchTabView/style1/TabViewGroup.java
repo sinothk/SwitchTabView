@@ -77,6 +77,7 @@ public class TabViewGroup extends RelativeLayout implements TabView {
 
         if (textSize > 0) {
             tvTitle.setTextSize(textSize);
+            tvTitle.getPaint().setTextSize(textSize);
         }
     }
 

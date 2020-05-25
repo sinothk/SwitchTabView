@@ -54,7 +54,7 @@ public class ScrollTab extends HorizontalScrollView implements View.OnClickListe
     private int type;
     private boolean isAvag;
     private float padding;//item内部左右预留间距
-    //    private String strTitles;
+    private String strTitles;
     private int indicatorType;
     private int indicatorColor;
     private float indicatorWidth;
@@ -96,7 +96,7 @@ public class ScrollTab extends HorizontalScrollView implements View.OnClickListe
         type = typedArray.getInt(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_type, TYPE_VIEW);
         isAvag = typedArray.getBoolean(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_avag, false);
         padding = typedArray.getDimension(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_padding, UIUtil.dip2px(context, 12));
-//        strTitles = typedArray.getString(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_titles);
+        strTitles = typedArray.getString(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_titles);
         indicatorType = typedArray.getInt(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_indicatorType, TYPE_INDICATOR_TREND);
         indicatorColor = typedArray.getColor(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_indicatorColor, ContextCompat.getColor(context, R.color.colorPrimary));
         indicatorWidth = typedArray.getDimension(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_indicatorWidth, UIUtil.dip2px(context, 30));
@@ -107,7 +107,7 @@ public class ScrollTab extends HorizontalScrollView implements View.OnClickListe
         // 文本
         textColor = typedArray.getColor(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_text_color, ContextCompat.getColor(context, R.color.lib_ui_common_color_text));
         textFocusColor = typedArray.getColor(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_text_color_selected, ContextCompat.getColor(context, R.color.colorPrimary));
-        textSize = typedArray.getDimension(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_text_size, UIUtil.dip2px(context, 0));
+        textSize = typedArray.getDimension(R.styleable.lib_ui_view_ScrollTab_lib_ui_view_stab_text_size, 0);
 
         typedArray.recycle();
     }
@@ -123,13 +123,14 @@ public class ScrollTab extends HorizontalScrollView implements View.OnClickListe
         paint.setColor(indicatorColor);
 
         tabs = new ArrayList<>();
+        // xml中添加标题方式
         items = new ArrayList<>();
-//        if (!TextUtils.isEmpty(strTitles)) {
-//            String[] strs = strTitles.split(";");
-//            for (String t : strs) {
-//                items.add(new TabItem(t, ""));
-//            }
-//        }
+        if (!TextUtils.isEmpty(strTitles)) {
+            String[] strs = strTitles.split(";");
+            for (String t : strs) {
+                items.add(new TabItem(t, ""));
+            }
+        }
     }
 
     /**

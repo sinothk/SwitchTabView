@@ -56,7 +56,9 @@ public class TabTextView extends View implements TabView {
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setColor(textColor);
         if (textSize > 0) {
-            paint.setTextSize(textSize);
+            paint.setTextSize(UIUtil.sp2px(context, textSize));
+        } else {
+            paint.setTextSize(UIUtil.sp2px(context, 5));
         }
         textHeight = UIUtil.getTextHeight(paint);
     }
@@ -116,6 +118,10 @@ public class TabTextView extends View implements TabView {
 //        }
 
         this.paint.setColor(focus ? textColorFocus : textColor);
+        if (textSize > 0) {
+            this.paint.setTextSize(textSize);
+        }
+
         invalidate();
     }
 

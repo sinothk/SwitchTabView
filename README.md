@@ -14,7 +14,7 @@
 ## Step 2. Add the dependency
 
     dependencies {
-            implementation 'com.github.sinothk:SwitchTabView:2.0.0406'
+            implementation 'com.github.sinothk:SwitchTabView:5.x.0430'
     }
 
 
@@ -54,11 +54,14 @@ https://github.com/sinothk/SwitchTabView/blob/master/app/imgs/QQ20181009163635.p
 # tab list
  ## dimens.xml
  
-    文字大小控制
+    文字大小控制：统一字号设置，多个可通过属性设置
     <?xml version="1.0" encoding="utf-8"?>
     <resources>
         <dimen name="scroll_tab_text_size">14sp</dimen>
     </resources>
+    
+    // 是否平分
+    app:lib_ui_view_stab_avag="true"
 
  ## xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -80,13 +83,15 @@ https://github.com/sinothk/SwitchTabView/blob/master/app/imgs/QQ20181009163635.p
             app:lib_ui_view_stab_text_color="#888888"
 
             app:lib_ui_view_stab_avag="false"
-
+            app:lib_ui_view_stab_indicatorColor="@color/green"
             app:lib_ui_view_stab_indicatorPadding="2dp"
             app:lib_ui_view_stab_indicatorRadius="1.5dp"
             app:lib_ui_view_stab_indicatorType="translation"
             app:lib_ui_view_stab_indicatorWeight="5dp"
             app:lib_ui_view_stab_indicatorWidth="30dp"
-
+            app:lib_ui_view_stab_text_color="@color/red"
+            app:lib_ui_view_stab_text_color_selected="@color/blue"
+            app:lib_ui_view_stab_text_size="28sp"
             app:lib_ui_view_stab_type="view_group" />
 
         <!--app:lib_ui_view_stab_text_color_selected="@color/lib_ui_color_yellow"-->
